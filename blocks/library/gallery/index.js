@@ -141,7 +141,7 @@ registerBlockType( 'core/gallery', {
 					/>
 				</InspectorControls>
 			),
-			<div key="gallery" className={ `blocks-gallery align${ align } columns-${ columns } crop-${ imageCrop }` }>
+			<div key="gallery" className={ `blocks-gallery align${ align } columns-${ columns } ${ imageCrop ? 'is-cropped' : '' }` }>
 				{ images.map( ( img ) => (
 					<GalleryImage key={ img.url } img={ img } />
 				) ) }
